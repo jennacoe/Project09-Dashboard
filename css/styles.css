@@ -273,7 +273,7 @@ input {
 	padding: 10px;
 }
 
-#message-user input {
+#message-user input, #message-user textarea {
 	display: block;
 	max-width: 470px;
 	margin-bottom: 15px;
@@ -281,11 +281,12 @@ input {
 	width: calc(100% - 22px);
 }
 
-#message-user input:nth-of-type(1) {
+#message-user input {
 	margin-top: 25px;
 }
 
-#message-user input:nth-of-type(2) {
+
+#message-user textarea	 {
 	height: 105px;
 }
 
@@ -394,7 +395,7 @@ input:checked + .slider:before {
 	background-color: #b2b2b2;
 }
 
-input { 
+input, textarea { 
 	border: 1px solid #d1d1d1;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -437,13 +438,25 @@ button {
     	display: block;
     	padding: 25.5px;
     }
-    aside { 
-		float: left;
-    	width: 90px;
-        height: 1950px;
+    header {
+    	position: fixed;
+    	width: calc(100% - 40px);
+    	z-index: 1;
+    }
+    aside {
+    	position: fixed;
+		width: 90px;
+    	height: calc(100% - 100px);
+    	top: 100px;
+    }
+    main {
+    	position: relative;
+    	width: calc(100% - 90px);
+   		top: 100px;
+    	left: 90px;
     }
     section {
-    	width: calc(100% - 140px);
+    	width: calc(100% - 90px);
     	margin-left: auto;
 	}
 	#daily-traffic, #new-members, #message-user {
@@ -499,6 +512,9 @@ button {
 		padding-top: 0;
     	border-top: 0;
    		margin-top: 30px;
+	}
+	#message-user form {
+		margin-right: 20px;
 	}
 	.clearfix {
   		clear: right;
