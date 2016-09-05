@@ -239,12 +239,17 @@ h2 {
 }
 
 #header-bar input {
-	max-width: 360px;
-	width: calc(100% - 22px);
+	/*max-width: 360px;
+	width: calc(100% - 22px);*/
 }
 
 #header-bar {
 	background-color: #fbfbfb;
+}
+
+#header-bar form {
+	position: relative;
+	width: 180px;
 }
 
 input + img {
