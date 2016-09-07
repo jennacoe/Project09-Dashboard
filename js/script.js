@@ -88,7 +88,6 @@ function successMessage() {
 
 $(".close").click(function(){
 	$(this).parent().hide();
-    alert("fjdkslfjsdlajf");
 });
 
 $("#send").click(function(e){
