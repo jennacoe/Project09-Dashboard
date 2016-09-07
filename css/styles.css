@@ -211,7 +211,7 @@ h2 {
 	position: relative;
 }
 
-#alertbar {
+.alertbar {
 	background-color: #7377bf;
 	color: #fff;
 	padding: 10px;
@@ -410,7 +410,6 @@ button {
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
-
 
 
 @media (min-width: 767px) {

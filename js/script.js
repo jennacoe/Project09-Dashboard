@@ -1,3 +1,5 @@
+
+
 var line = $("#lineChart");
 var chart1 = new Chart(line, {
     type: 'line',
@@ -73,19 +75,29 @@ if ($("#alertbar").show()) {
 }
 
 function addAlertBox() {
-	$("#traffic-time").before('<div id="alertbar">Alert Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="close">X</span></div>');
+	$("#traffic-time").before('<div id="alertbar" class="alertbar">Alert Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="close">X</span></div>');
+}
+
+function errorMessage() {
+    $("#message-user form").before('<div id="errorMessage" class="alertbar">Make sure you select a user and write a message</div>');
+}
+
+function successMessage() {
+    $("#message-user form").before('<div id="successMessage" class="alertbar">Your message was successfully sent.</div>');
 }
 
 $(".close").click(function(){
-	$("#alertbar").hide();
+	$(this).parent().hide();
+    alert("fjdkslfjsdlajf");
 });
 
 $("#send").click(function(e){
+    e.preventDefault();
     if( $("#search").val().length === 0 || $("#message").val().length === 0 ) {
-        alert("Make sure you select a user and write a message");
-        e.preventDefault();
+        errorMessage();
     } else  {
-        alert("You had successfully submitted your message");
+        $("#errorMessage").hide();
+        successMessage();
     }
 });
 
